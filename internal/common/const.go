@@ -1,0 +1,41 @@
+package common
+
+const (
+	VtDefault = "0"
+
+	FgDefault     = VtDefault
+	FgBlack       = "30"
+	FgRed         = "31"
+	FgGreen       = "32"
+	FgYellow      = "33"
+	FgBlue        = "34"
+	FgMagenta     = "35"
+	FgCyan        = "36"
+	FgWhite       = "37"
+	FgBlackBold   = "30;1"
+	FgRedBold     = "31;1"
+	FgGreenBold   = "32;1"
+	FgYellowBold  = "33;1"
+	FgBlueBold    = "34;1"
+	FgMagentaBold = "35;1"
+	FgCyanBold    = "36;1"
+	FgWhiteBold   = "37;1"
+
+	BgBlack         = "40"
+	BgRed           = "41"
+	BgGreen         = "42"
+	BgYellow        = "43"
+	BgBlue          = "44"
+	BgMagenta       = "45"
+	BgCyan          = "46"
+	BgWhite         = "47"
+	BgDefault       = "49"
+	BgBlackBright   = "100"
+	BgRedBright     = "101"
+	BgGreenBright   = "102"
+	BgYellowBright  = "103"
+	BgBlueBright    = "104"
+	BgMagentaBright = "105"
+	BgCyanBright    = "106"
+	BgWhiteBright   = "107"
+)
