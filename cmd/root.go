@@ -79,7 +79,5 @@ func initConfig() {
 	viper.SetDefault("Checked", "\u2713")
 	viper.SetDefault("Unchecked", "\u2716")
 	// If a config file is found, read it in.
-	if err := viper.ReadInConfig(); err != nil {
-		fmt.Fprintln(os.Stderr, err)
-	}
+	viper.ReadInConfig()
 }
