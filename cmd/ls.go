@@ -72,16 +72,6 @@ var lsCmd = &cobra.Command{
 		maxelaplen := 0
 		if os.Getenv("TODO_FORMAT") != "mini" {
 			for _, todo := range filteredList {
-				switch todo.Status {
-				case "done":
-					if !*lsAll && !*lsDone {
-						continue
-					}
-				case "pending":
-					if *lsDone {
-						continue
-					}
-				}
 				maxelaplen = Max(maxelaplen, len(getElapsedString(todo.Modified)))
 				maxidlen = Max(maxidlen, len(fmt.Sprintf("%d", todo.ID)))
 			}
@@ -90,7 +80,7 @@ var lsCmd = &cobra.Command{
 		if os.Getenv("TODO_FORMAT") != "mini" {
 			out.Write([]byte("\n"))
 		}
-		for _, todo := range todoList {
+		for _, todo := range filteredList {
 			switch todo.Status {
 			case "done":
 				mark = checked
