@@ -16,4 +16,5 @@ Put `.todo.yaml` in your home directory.
 ```yaml
 Checked: "\u2714"
 Unchecked: "\u2718"
+UpdateTimeStamp: true
 ```

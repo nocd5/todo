@@ -78,6 +78,7 @@ func initConfig() {
 
 	viper.SetDefault("Checked", "\u2713")
 	viper.SetDefault("Unchecked", "\u2716")
+	viper.SetDefault("UpdateTimeStamp", false)
 	// If a config file is found, read it in.
 	viper.ReadInConfig()
 }

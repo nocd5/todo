@@ -27,6 +27,7 @@ import (
 
 	. "github.com/nocd5/todo/internal/common"
 	"github.com/spf13/cobra"
+	"github.com/spf13/viper"
 )
 
 // checkCmd represents the check command
@@ -43,7 +44,9 @@ var checkCmd = &cobra.Command{
 					fmt.Fprintln(os.Stderr, err)
 				} else {
 					todoList[idx].Status = "done"
-					todoList[idx].Modified = GetModifiedTime()
+					if viper.GetBool("UpdateTimeStamp") {
+						todoList[idx].Modified = GetModifiedTime()
+					}
 					Store(dbFile, todoList)
 				}
 			}
