@@ -24,7 +24,6 @@ import (
 	"fmt"
 	"os"
 	"strconv"
-	"time"
 
 	. "github.com/nocd5/todo/internal/common"
 	"github.com/spf13/cobra"
@@ -44,7 +43,7 @@ var undoCmd = &cobra.Command{
 					fmt.Fprintln(os.Stderr, err)
 				} else {
 					todoList[idx].Status = "pending"
-					todoList[idx].Modified = time.Now().Format("2006/01/02T15:04:05.000Z")
+					todoList[idx].Modified = GetModifiedTime()
 					Store(dbFile, todoList)
 				}
 			}
